@@ -1,0 +1,13 @@
+.titulo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.texto {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3em;
+    font-weight: normal;
+    font-style: italic;
+}

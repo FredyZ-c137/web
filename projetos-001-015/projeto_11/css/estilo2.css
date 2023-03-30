@@ -1,0 +1,30 @@
+* {
+    margin: 0px; padding: 0px;
+}
+
+body {
+    /*Todo corpo de texto da página
+    vai ficar amarelo. apliquei a 
+    formatação no body e todos os 
+    elemento dentro dele herdaram
+    a formatação */
+    color: #725908;
+    font-size: 1.2em;
+
+    padding: 20px;
+    margin-top: 50px;
+
+    /*Nesta formatação, os elementos
+    não herdam o border do body,
+    pois essa formatação é mais específica*/
+    border: 4px solid #027912;
+}
+
+.artigo {
+    font-family: 'Roboto';
+    width: 80%;
+    height: 200px;
+    margin: 30px;
+    border: 1px solid red;
+    padding: 20px;
+}

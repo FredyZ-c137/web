@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'roboto';
+}
+header {
+    background-image: url("../img/Pet-Store.png");
+    background-color: black;
+    width: 100%;
+    height: 395px;
+    background-position: center center; 
+    background-size: cover;
+}
+.itph {
+    margin-left: 250px;
+} 
+:link:hover { 
+    border-radius: 2px;
+    background-color: #513DD9;
+}
+nav:hover { background: #5F1BF2; 
+}
+nav {
+    background-color: #5F1BF2;
+    text-align: center;
+    height: 70px;
+    padding-top: 81px;
+}
+nav a{
+    text-decoration: none;
+    font-size: large;
+    margin-left: 1%;
+    padding-left: 1%;
+    padding: 5px 10px 5px 10px;
+    color: #fff;
+}
+#txtBusca{
+    float:left;
+    background-color: white;
+    border-radius: 6px;
+    padding-left:5px;
+    font-size:18px;
+    border: solid 1px black;
+    height:32px;
+    width:426px;
+}
+#btnBusca{
+    float:left;
+    cursor:pointer;
+}
+#divBusca img{
+    float:left;
+}
+#divBusca{
+    display: flex;
+    justify-content: end;
+    margin-right: 15%;
+    position: relative;
+    bottom: 40px;
+}
+#foto {
+    display: flex;
+    width: 80%;
+    height: 390px;
+    background-image: url("../img/banner\ \(2\).png");
+    background-position: center center; 
+    background-color: #5F1BF2;
+    background-size: cover;
+    margin-top: 5%;
+    margin-left: 10%;
+    border-radius: 5px; 
+}
+article {
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-left: 10%;
+    gap: 8em;
+}
+h1 {
+    margin-top: 2%;
+    margin-left: 10%;
+    font-family: 'Roboto';
+}
+h2 {
+    margin-left: 10%;
+    font-family: 'Roboto';
+    font-size: xx-large;
+}
+p {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+.preco {
+    border: #5F1BF2 solid 4px;
+    border-radius: 18px;
+    text-align: center;
+    width: 130px;
+    margin-bottom: 10%;
+    margin-left: 15.5%;
+} 
+img {
+    border-radius: 9px;
+    border: #5F1BF2 solid 1px;
+}
+table {
+    width: 800px;
+    border: 1px solid #5F1BF2;
+    border-collapse: collapse;
+    margin-left: 30%;
+    margin-top: 50px;
+}
+
+th, td {
+    border: 1px solid #5F1BF2;
+    padding: 7px;
+}
+
+th {
+    text-transform: uppercase;
+    text-align: left;
+    background: #5F1BF2;
+    color: white;
+    font-size: 90%;
+}
+
+tr:hover {
+    background-color: #513DD9;
+}
+
+.moeda {
+    text-align: right;
+}
+.titulotabela {
+    margin-left: 36%;
+}
+#bannerhorizontal{
+    display: flex;
+    justify-content: flex-start;
+    height: 1100px;
+    width: 345px;
+    background-color: #5F1BF2;
+    background-image: url("../img/aside.png");
+    background-position: center center;
+    background-size: cover;
+    margin-left: 11%;
+}
+.selo {
+    display: flex;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    top: 1100px;
+    left: 20px;
+    z-index: 0;
+    border: none;
+}
+#titulo3 {
+    width: 18%;
+    margin-left: 11%;
+    margin-bottom: 1%;
+    font-size: 34px;
+    margin-top: 5%;
+    font-family: 'Roboto';
+    border-bottom: black solid 4px;  
+}
+form {
+    display: flex;
+    justify-content: center center;
+    flex-direction: column;
+    width: 50%;
+    height: 400px;
+    margin: 0px auto;
+    border: #5F1BF2 solid 2px;
+    border-radius: 6px;
+}
+legend {
+    font-weight: bold;
+}
+label {
+    display: block;
+    cursor: pointer;
+}
+input {
+    text-align: left;
+}
+input .radio{
+    line-height: 20px;
+}
+.caixa {
+    line-height: 20px;
+    width: 300px;
+}
+textarea {
+    width: 100%;
+    height: 10em;
+}

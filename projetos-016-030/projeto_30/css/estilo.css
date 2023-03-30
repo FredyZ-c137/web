@@ -1,0 +1,13 @@
+*{
+    font-family: 'roboto';
+    font-weight: bold !important;
+}
+
+section {
+    width: 80%;
+    margin: 0px auto;
+}
+
+.justificando {
+    text-align: justify;
+}

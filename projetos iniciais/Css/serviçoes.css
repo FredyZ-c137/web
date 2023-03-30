@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto';
+}
+header {
+    background-image: url("../img/Pet-Store.png");
+    background-color: black;
+    width: 100%;
+    height: 395px;
+    background-position: center center; 
+    background-size: cover;
+}
+.itph {
+    margin-left: 10%;
+}
+:link:hover { 
+    border-radius: 2px;
+    background-color: #513DD9;
+}
+nav:hover { background: #5F1BF2; 
+}
+nav {
+    background-color: #5F1BF2;
+    text-align: center;
+    height: 70px;
+    padding-top: 81px;
+}
+nav a{
+    font-family: 'Roboto';
+    text-decoration: none;
+    font-size: large;
+    margin-left: 1%;
+    padding-left: 1%;
+    padding: 5px 10px 5px 10px;
+    color: #fff;
+}
+#txtBusca{
+    float:left;
+    background-color: white;
+    border-radius: 6px;
+    padding-left:5px;
+    font-size:18px;
+    border: solid 1px black;
+    height:32px;
+    width:426px;
+}
+#btnBusca{
+    float:left;
+    cursor:pointer;
+}
+#divBusca img{
+    float:left;
+}
+#divBusca{
+    height:37px;
+    width:400px;
+    position: relative;
+    left: 1100px;
+    bottom: 40px;
+}

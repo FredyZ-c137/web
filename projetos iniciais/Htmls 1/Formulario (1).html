@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" media="all" href="superxandão.css">
+</head>
+<body>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="Untitled-2.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="seila.html">Valor nutricional dos Pratos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Formulario.html">Fazer Pedido</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+    </ul>
+    <br>
+    <form class="formulario" method="post" action="https://umbancodedadosnservidor.uk.co">
+        <h1 class="title">Seu pedido</h1>
+        <label class="label" for="nome">Nome</label>
+        <input type="text" id="nome" name="nome">
+        <br><br>
+        <label class="label"  for="m">Aconpanhamento</label>
+        <br>
+        <input type="radio" id="m" name="sexo" value="m">    Refri pequeno
+        <br>
+        <input type="radio" id="f"name="sexo"  value="f">    Cerveja 
+        <br>
+        <input type="radio" id="b"name="sexo"  value="b">    Outros
+        <br><br>
+        <label class="label"  for="telefone">telefone</label>
+        <input type="tel" id= "telefone" class="campo" name= "telefone" >
+        <br><br>
+        <label class="label"  for="email">Endereço</label>
+        <input type="email" id="email" class="campo" name="email">
+        <br><br>
+        <label class="label" for="vaga">Escolha o metodo de pagamento</label>
+        <select id="vaga" name="vaga">
+        <option value="su"> pagamento</option>
+        <option value="df"> debito</option>
+        <option value="db" > credito</option>
+        <option value="ui"> dinheiro</option>
+        </select>
+        <br><br>
+        <br><br>
+        <label class="label" for="vaga">Escolha seu pedido</label>
+        <select id="vaga" name="vaga">
+        <option value="su"> Pratos do dia</option>
+        <option value="df"> Strogonoff de Frango </option>
+        <option value="db" > Carne com Salada </option>
+        <option value="ui"> Camarão cremoso </option>
+        </select>
+        <br><br>
+        <label class="label" for="senha"></label>Valor do pedido</label>
+        <a class="sua">R$ 54.90</a>
+        <br><br>
+        <button type="submit" class="botao"> Cancelar Pedido </button>
+        <br><br>
+        <button type="submit" class="botao"> Confirmar Pedido </button>
+    </form>
+</body>
+</html>

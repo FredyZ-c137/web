@@ -1,0 +1,29 @@
+HTML5:
+
+quando criamos um arquivo html seu nome e index.html 
+
+Dentro do main(principal)
+podemos colocar outro index como (artical, nav, p, section).
+
+links local são relativos e links na nuvem são absolutos
+
+rowspan junta linhas em uma tabela
+colspan junta as colunas de uma tabela 
+
+especificiadade quanto mais interno mais especifico e quanto mais especifico mais autoridade ele tem sobre as demais classes 
+
+o que for especifico no codigo sera um id # e um id n pode ter nomes repetidos e o que 
+for usado muitas vezes usamos uma class .
+
+herança: um seletor interno exp(p, a) herdam as caracteristicas de seus "pais"(section, ul, li, div).
+
+seletor interno < class < id
+
+controle de fruxo comtrole dos elemento de um site
+
+trasição quando quiser fazer uma mudança de estado de um elemento css
+
+animação quando quiser mover ou "dar vida" a um elemento
+
+
+ 

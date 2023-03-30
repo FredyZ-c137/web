@@ -1,0 +1,11 @@
+h1 {
+    /*H1 tem a preferência, a cor brown não é aplicada ao header*/
+    color:blue;
+}
+p {
+    color: cadetblue;
+}
+
+header {
+    color: brown;
+}

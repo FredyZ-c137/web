@@ -1,0 +1,118 @@
+header {
+    background-color: black;
+    width: 100%;
+    background-position: center center; 
+    background-size: cover;
+    padding: 100px;
+    background-image: url("../img/Banner.jpg");
+}
+
+.espacamento3 {
+    padding: 10px 10px 10px 155px;
+
+}
+
+.titulo {
+    text-align: left;
+    width: 500px;
+    margin-left: 619px;
+}
+
+nav {
+    margin-top: 0px;
+    text-align: center;
+    padding: 20px 15px 20px 10px;
+    background-color: black;
+}
+
+
+.navegacao {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 1.2em;
+    margin-left: 40px;
+}
+
+h2 {
+    padding: 0px 415px 0px 10px;
+}
+
+h1 {
+    padding: 0px 420px 0px 10px;
+    border-bottom: 1px solid black;
+    text-align: left;
+    width: 500px;
+    margin-left: 619px;
+}
+
+figure {
+    padding: 0px 430px 0px 10px;
+}
+
+.espacamento {
+    padding: 0px 0px 1px 155px;
+}
+
+img {
+    margin-right: 10px;
+}
+
+.espacamento2 {
+    padding: 0px 0px 1px 155px;
+}
+
+.subtitulo {
+    padding: 0px 440px 0px 10px;
+}
+
+body {
+    text-align: center;
+    background-color: rgb(196, 196, 196);
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+
+p {
+    text-align: left;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    padding: 0px 10px 0px 630px;
+}
+
+footer {
+    padding: 10px 10px 10px 10px;
+}
+
+.faker {
+    padding: 10px 10px 10px 10px;
+}
+
+.deft {
+    padding: 10px 440px 1px 0px;
+}
+
+.bai {
+    padding: 10px 475px 1px 0px;
+} 
+
+.Keria {
+    padding: 10px 440px 1px 0px;
+}
+
+.botaobonito {
+    text-decoration: none;
+    color: black;
+    background-color: beige;
+    border: 1px solid orangered;
+    padding: 10px 60px 10px 20px;
+}    
+
+.botao {
+    padding: 10px 465px 10px 0px;
+}
+
+a {
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+

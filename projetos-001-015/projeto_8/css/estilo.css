@@ -1,0 +1,33 @@
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+p {
+    width: 250px;
+    background-color: white;
+    width: 600px;
+}
+
+#container {
+    margin: 0px auto;
+    background-color: #ffffff;
+    width: 600px;
+}
+
+/*Posicionamento*/
+.absoluto {
+    border: 1px solid red;
+    position: absolute;
+
+    left: 400px;
+    top: 500px;
+}

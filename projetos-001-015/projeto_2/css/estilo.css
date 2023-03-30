@@ -1,0 +1,29 @@
+.artigo-1 {
+    width: 300px;
+
+    border: 1px solid red;
+
+    margin-right: 20px;
+
+    float: left;
+}
+
+.artigo-2 {
+    width: 300px;
+
+    border: 1px solid red;
+
+    margin-right: 30px;
+
+    float: left;
+}
+
+.artigo-3 {
+    width: 300px;
+
+    border: 1px solid red;
+
+    margin-right: 20px;
+
+    float: left;
+}

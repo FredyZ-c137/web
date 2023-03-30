@@ -1,0 +1,39 @@
+h1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+/*Formatação float*/
+.disp1 {
+    display: inline; /* padrão */
+    width: 1000px; /*Não posso aumentar a largura*/
+    height: 1000px; /*Não posso aumentar a altura*/
+    padding: 5px;
+    background-color: #ff880078;
+    font-size: x-large;
+}
+
+.disp2 {
+    display: inline-block;
+    width: 200px; /*Posso aumentar a largura*/
+    height: 150px; /*Posso aumentar a altura*/
+    padding: 5px;
+    background-color: #0b92344d;
+    font-size: x-large;
+}
+
+.disp3 {
+    display: block; /*1 em cada linha*/
+    width: 400px;
+    height: 100px;
+    padding: 5px;
+    background-color: #a200ff;
+    font-size: x-large;
+}

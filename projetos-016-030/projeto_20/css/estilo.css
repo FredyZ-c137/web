@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+header {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 4%;
+}
+
+footer {
+    clear: both;
+    background-color: #333;
+    color: #fff;
+    padding: 2%;
+    text-align: center;
+}
+
+/* Aplica a animação ao elemento */
+@keyframes mover {
+    from {background-color: red;}
+    to {background-color: yellow;}
+
+    0% {left: 0;}
+    50% {left: 50%;}
+    100% {left: 0;}
+}
+
+/*Define as propiedades do elemento a ser animado */
+#meu-elemento {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    background-color: #ffbb00;
+    position: relative;
+    animation-name: mover;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+/*Outro exemplo*/
+@keyframes escalonar {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.5);}
+    100% {transform: scale(1);}
+}
+
+/* Aplica a animação ao elemento */
+.meu-elemento-2 {
+    animation: escalonar 1s ease-in-out infinite;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    background-color: #8d6906;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+

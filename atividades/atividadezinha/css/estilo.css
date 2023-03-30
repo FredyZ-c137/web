@@ -1,0 +1,49 @@
+body {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    font-family: "Roboto", sans-serif;
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+}
+
+/* É importante manter essa ordem */
+a {
+    font-size: 1.5em;
+    padding: px;
+    text-decoration: none;
+    margin: 5px;
+}
+
+/*Estado: Não visitado */
+a:link {
+    color: #dd7f04;
+}
+
+/*Estado: visitado */
+a:visited {
+    color: blue;
+}
+
+/*Estado: Ativo
+(Clicar e segurar para ver */
+a:active {
+    color: #07b34f;
+}
+
+header {
+    margin: 20px;
+    padding: 20px;
+}

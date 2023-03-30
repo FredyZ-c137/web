@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2? family= Roboto:wght@100 & family= Sofia+Sans+Semi+Condensed:wght@1;200 & display=swap');
+
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: medium;
+    font-family: 'Roboto', !important;
+}
+a {
+    color: rgb(0, 0, 0);
+    border-radius: 7px;
+    width: 120px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a:hover{
+    background-color: rgb(197, 225, 250);
+    width: 120px;
+}
+#h1 {
+    color: rgb(255, 255, 255);
+}
+nav {
+    height: 55px;
+    background-color: rgb(218, 234, 248);
+}
+section {  
+    width: 60%;
+    margin-left: 37% !important;
+    height: 250px;
+}
+#foter {
+    border: black 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+}
+.foto {
+    border-radius: 7px !important;
+    border: 7px solid rgb(0, 0, 0);
+}
+header {
+    height: 300px;
+    background-color: rgb(2, 2, 99);
+}

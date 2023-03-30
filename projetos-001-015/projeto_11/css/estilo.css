@@ -1,0 +1,23 @@
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    width: 50%;
+}
+
+/*a é filho de li*/
+ul a {
+    color: blueviolet;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+/*a é filho de p*/
+a {
+    color: black;
+    font-size: 2em;
+    text-decoration: none;
+}

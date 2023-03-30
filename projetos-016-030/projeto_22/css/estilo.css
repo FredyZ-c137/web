@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'roboto';
+    font-weight: bold;
+}
+
+h2 {
+    padding: 5%;
+}
+
+p {
+    padding-left: 5%;
+}
+
+header {
+    text-align: center;
+    background-color: #333;
+    color: #ffff;
+    padding: 4%;
+}
+
+footer {
+    clear: both;
+    background-color: #333;
+    color: #fff;
+    padding: 2%;
+    text-align: center;
+}
+
+#box {
+    margin: 5%;
+    width: 400px;
+    height: 200px;
+    background: rgb(235, 150, 54);
+
+    /*Trasição na largura e altura*/
+    transition-property: width, height, border-radius;
+    /*tempo da transição*/
+    transition-duration: 2s;
+    /*Tipo de transição*/
+    transition-timing-function: linear;
+    /*Tempo de espera*/
+    transition-delay: 1s;
+}
+
+/*Aplicar a transição com efeito hover*/
+#box:hover {
+    width: 300px;
+    height: 250px;
+    border-radius: 30px;
+}

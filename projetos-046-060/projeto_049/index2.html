@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
+    <!--Bootstrap (CDN)-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1 class="display-5 p-2">Barra de Navegação com menu Dropdown</h1>
+        </section>
+        <header>
+            <!--Backgound com Dark e light-->
+            <nav class="navbar navbar-expand-sm navbAR-DARK bg-primary P-2">
+                <a class="navbar-brand" href="#">EMPRESA X</a>
+                <!--Menu Sanduiche (Hamburger)
+                data-bs-toogle: indica que o botão pressionado apresentará o menu.
+                data-bs-target define o que vamos mostrar através de um Id
+                -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-target">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--Colapsando o menu-->
+                <div class="collapse navbar-collapse" id="menu-target">
+                    <!--Alinhamento do Menu para direita
+                    margem esquerda automática-->
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#">Página inicial</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Galeria</a></li>
+
+                        <!--Menu Dropdown-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Contato</a>
+
+                            <!--Itens do Dropdown-->
+                            <div class="dropdown-menu bg-primary">
+                                <a class="dropdown-item text-warning bg-primary" href="#"></a>
+                                <a class="dropdown-item" href="#"></a>
+                                <a class="dropdown-item" href="#"></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </main>
+    <!--Biblioteca JS e POPPER ficam no final do seu arquivo HTML-->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

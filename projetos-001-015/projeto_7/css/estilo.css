@@ -1,0 +1,27 @@
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+p {
+    width: 0px auto;
+    background-color: white;
+    width: 600px;
+}
+
+/*Posicionamento*/
+.relativo {
+    border: 1px solid red;
+    position: relative;
+
+    left: 600px;
+    top: 0px;
+}

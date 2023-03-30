@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'roboto';
+    font-weight: bold;
+}
+
+header {
+    text-align: center;
+    background-color: #1d0574;
+    color: #fff;
+    padding: 4%;
+    margin-bottom: 2%;
+}
+
+main {
+    width: 50%;
+    margin: 0px auto;
+}
+
+footer {
+    clear: both;
+    width: 100%;
+    height: 100px;
+    margin-top: 2%;
+    /*Centralização vertical do texto*/
+    line-height: 100px;
+    background-color: #0b6ac4;
+    /*Centralização horizontal do texto*/
+    text-align: center;
+    font-size: 0.8em;
+    color: #e9e7e0;
+}
+
+main {
+    width: 80%;
+}
+
+#caixa1 {
+    font-size: 14px;
+    width: 300px;
+    height: 200px;
+    background: #f38d07;
+    margin: 10px;
+}
+
+#caixa2 {
+    font-size: 14px;
+    width: 300px;
+    height: 200px;
+    background: #f38d07;
+    margin: 10px;
+    padding: 30px;
+    border-radius: 3px;
+    /*Inclusão dos valores de Borda e Padding*/
+    box-sizing: border-box;
+}
+

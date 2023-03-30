@@ -1,0 +1,42 @@
+main {
+    width: 950px;
+    margin: 0px auto;
+}
+
+.titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+}
+
+.artigo-1 {
+    width: 300px;
+    border: 1px solid red;
+    /*Espaçamento externo*/
+    margin-right: 20px;
+
+    /*Fluxo*/
+    clear: both;
+}
+
+.artigo-2 {
+    width: 300px;
+    border: 1px solid blue;
+    /*Espaçamento externo*/
+    margin-right: 20px;
+
+    /*Fluxo*/
+    float: left;
+}
+
+.artigo-3 {
+    width: 300px;
+    border: 1px solid green;
+
+    /*Fluxo*/
+    float: right;   
+}
+
+.espacamento {
+    /*Espaçamento interno*/
+    padding: 30px;
+}
