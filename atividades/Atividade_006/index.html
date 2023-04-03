@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GM bank</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <!--Bootstrap (CDN)-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">GM bank</a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse gap-4 collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Consultoria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sua conta</a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+    </nav>
+
+    <main class="container-fluid banner">
+        <article>
+            <h5 id="texto">Olá, Abra sua conta gratuitamente</h5>
+            <h1 id="texto">GM bank</h1>
+            <button id="texto" class="btn btn-warning m-3">Saiba mais</button>
+        </article>
+    </main>
+
+    <main class="container">
+
+        <h2 class="text-center my-5">O que nós fazemos?</h2>
+        <div class="row text-center">
+            <div class="col-xl-3 col-md-6 col-sm-12 mt-5">
+                <h3 class="mt-4">Consultoria de imvestimento</h3>
+                <p class="conteudo">
+                    Analisamos sua renda e suas economias e indicamos os melhores investimentos pra seu perfil.
+                </p>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12 mt-5">
+                <h3 class="mt-4">Vantagems pra clientes</h3>
+                <p class="conteudo">
+                    Alem de ter parcelamentos com juros baixos nossos clientes tem descontos e vantagems em todas as empresas parceiras e socios.
+                </p>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12 mt-5">
+                <h3 class="mt-4">Cartão GM</h3>
+                <p class="conteudo">
+                    Com seu cartão GM você pode fazer compras parceladas com limite de ate R$ 4000 e com o nosso sistema de milias a cada milia gasta você concorre a premios especiais.
+                </p>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12 mt-5">
+                <h3 class="mt-4">Sistema de compras de fundo de investimentos</h3>
+                <p class="conteudo">
+                    compre e invista em fundos de investimentos com nosso sistema de trade de ações e fundos.
+                </p>
+            </div>
+        </div>
+
+        <h2 class="text-center m-5">Nossos Socios</h2>
+
+        <div class="row text-center">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <img src="./img/amazon.png" class="img-fluid mb-3 rounded amazo" alt="Imagem 1">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <img src="./img/netflix.png" class="img-fluid mb-3 rounded" alt="Imagem 2">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <img src="./img/ifood.png" class="img-fluid mb-3 rounded" alt="Imagem 3">
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <img src="./img/sony.jpg" class="img-fluid mb-3 rounded" alt="Imagem 1">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <img src="./img/kabum.jpg" class="img-fluid mb-3 rounded" alt="Imagem 2">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <img src="./img/uber.png" class="img-fluid mb-3 rounded" alt="Imagem 3">
+            </div>
+        </div>
+    </main>
+    <footer class="footer mt-5 py-4 bg-dark text-white">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h5>Links Úteis</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-reset hover-underline">Termos</a></li>
+                        <li><a href="#nav-link" target="_blank"
+                                class="text-decoration-none text-reset hover-underline">Nossos Serviços</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Faça uma consulta do seu CPF</h5>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Digite seu CPF"
+                                aria-label="Digite sua pesquisa" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                                <i class="fa-regular fa-envelope"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="text-center p-3 bg-black text-white">
+        ©2023 Todos os direitos reservados.
+    </div>
+</body>
+<!--Biblioteca JS e POPPER ficam no final do seu arquivo HTML-->
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+crossorigin="anonymous"></script>
+<!--Ícones do fonte awesome-->
+<script src="https://kit.fontawesome.com/98a2db0df8.js" crossorigin="anonymous"></script>
+</html>
