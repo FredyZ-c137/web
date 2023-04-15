@@ -111,7 +111,7 @@ void main(){
     break;
 
     case 7:
-      stdout.write('Digite o numero ');
+      stdout.write('Digite o número ');
       int opcao1 = int.parse(stdin.readLineSync()!);
 
       int doblo = opcao1 * 2;
