@@ -139,6 +139,7 @@ void main(){
 
     //sétimo case
     case 7:
+      stdout.write('Digite o número ');
       //entrada de dados
       stdout.write('Digite o numero ');
       int opcao1 = int.parse(stdin.readLineSync()!);
