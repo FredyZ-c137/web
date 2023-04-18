@@ -73,6 +73,27 @@ void main() {
       }
     break;
 
+    case 5:
+      stdout.write("Digite um número: ");
+      int numero = int.parse(stdin.readLineSync()!);
+
+      int fatorial = 1;
+      for (int i = 1; i <= numero; i++) {
+        fatorial *= i;
+      }
+
+      print("O fatorial de $numero é $fatorial");
+
+    break;
+
+    case 6:
+      for (int i = 5; i <= 100; i++) {
+        if (i % 7 == 0 && i % 5 != 0) {
+          print('esse $i serve');
+        }
+      } 
+    break;
+
     case 9:
         //lista de numero inteiros
         List<int> numeros = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 
