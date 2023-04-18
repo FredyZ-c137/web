@@ -56,7 +56,11 @@ void main() {
     break;
 
     case 3:
-
+      for (int i = 5; i <= 100; i++) {
+        if (i % 7 == 0 && i % 5 != 0) {
+          print(i);
+        }
+  }
     break;
 
     case 4:
@@ -92,6 +96,28 @@ void main() {
           print('esse $i serve');
         }
       } 
+    break;
+    
+    case 7:
+      stdout.write("Digite um número: ");
+      int num = int.parse(stdin.readLineSync()!);
+      int soma = 0;
+      for (int i = 1; i <= num; i++) {
+        soma += i;
+      }
+      print("A soma de todos os números de 1 até $num é $soma.");
+    break;
+    
+    case 8:
+      stdout.write("Digite uma letra: ");
+      String letra = stdin.readLineSync()!;
+      String letra1 = letra.toLowerCase();
+
+      if (letra1 == 'a' || letra1 == 'e' || letra1 == 'i' || letra1 == 'o' || letra1 == 'u'){
+        print("Vogal");
+      } else {
+        print("Consoante");
+      }
     break;
 
     case 9:
