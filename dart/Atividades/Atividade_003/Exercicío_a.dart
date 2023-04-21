@@ -15,6 +15,6 @@ void main() {
   int num3 = int.parse(stdin.readLineSync()!);
   listaNumeros.add(num3);
 
-  listaNumeros.forEach((numero) => print(numero));
+  listaNumeros.forEach((numero) => print('$numero ª'));
 
 }
