@@ -3,7 +3,7 @@ void main() {
   print('-'*70);
   print('EXERCÍCIO A: ADD E FOREACH');
   print('-'*70);
-  List<int> listaNumeros = [1, 2, 3]; 
+  List<int> listaNumeros = []; 
 
   stdout.write('Digite um numero: ');
   int num1 = int.parse(stdin.readLineSync()!);
@@ -15,6 +15,6 @@ void main() {
   int num3 = int.parse(stdin.readLineSync()!);
   listaNumeros.add(num3);
 
-  listaNumeros.forEach((numero) => {numero});
+  listaNumeros.forEach((numero) => print(numero));
 
 }
