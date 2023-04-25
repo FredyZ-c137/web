@@ -1,9 +1,9 @@
 import 'dart:io';
 void main() {
 
-    List<String> listaVaziaDeNomes = [];
+  List<String> listaVaziaDeNomes = [];
 
-      while(true){
+    while(true){
       print('-'*70);
       print('EXERCÍCIO K: SWITCH, ADD, REMOVEAT VALIDACAO DE INDICE E VALIDAÇÃO DE LISTA VAZIA');
       print('-'*70);
