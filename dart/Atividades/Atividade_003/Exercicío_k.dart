@@ -1,6 +1,6 @@
 import 'dart:io';
 void main() {
-
+ 
   List<String> listaVaziaDeNomes = [];
 
     while(true){
@@ -50,6 +50,7 @@ void main() {
             print('nomes $nome');
           }
         return;
+      
 
       default:
         print('Opção inválida!');
