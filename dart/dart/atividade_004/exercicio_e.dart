@@ -25,6 +25,4 @@ void main() {
     //saida de dados formatada
     print('A media de $nomeAluno é $div');
     
-  //crie um programa que peça ao usuario o nome do aluno depois as suas notas e 
-  //por fim utilize o metodo reduce para fazer a media das notas
 }

@@ -71,9 +71,7 @@ void main() {
           //return pra interrope o programa
           return;
       }
-      //Desenvavo um codigo em dart que usuario escolha adicionar um nome e telefone ao mapa ou exibir a lista 
-      //de nomes e telefones ja digitados depois que o usuario digitar o nome e telefone ele tera a opição de 
-      //sair do programa ou de digitar Enter e continuar adicionando
+      
     }
   }
 

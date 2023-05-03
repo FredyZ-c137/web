@@ -3,7 +3,7 @@ void main() {
   //Declaração de mapa vazio
   Map<String, String> mapanomes = {};
   //laço for que pergunta para o usuario os nome pra adicionar a lista
-  for (var i = 1; i < 11; i++){
+  for (var i = 1; i < 11; i++){ 
       //print
       stdout.write('Digite o $iº nome (ou Sair pra finalisar o programa): ');
       //enntrada de dados
@@ -22,6 +22,5 @@ void main() {
       String? chave = 'Nome $i';
       mapanomes[chave] = nome;
     }
-    //Desenvova um codigo dart que peça ao usuario 10 nomes ou se o usuario digitar 
-    //'sair' ele printa os nomes digitados e depois fecha o programa
+    
 }

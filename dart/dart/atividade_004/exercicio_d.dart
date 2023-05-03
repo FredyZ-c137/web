@@ -22,6 +22,4 @@ void main() {
       //saida de dados formatada
       print('$key       RS$value');
     });
-  //crie um programa que peça ao usuario 5 produtos com seus 
-  //respectivos 5 preços depois print eles na tela usando um foreach
 }
