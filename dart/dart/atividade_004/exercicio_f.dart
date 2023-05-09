@@ -23,7 +23,7 @@ void main() {
     for (String chave in chaves) {
       //*
       print('$chave');
-      //entrada de dados 
+      //entrada de dados  
       String? resposta = stdin.readLineSync()!;
       //soma da variavel contadora
       r ++;
