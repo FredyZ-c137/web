@@ -1,28 +1,37 @@
 import 'dart:io';
 
-//Programa principal
+// Programa principal
 void main() {
   List<double> precos = [
     20.0, 10.0, 35.0, 10.0, 4.0, 8.0, 4.0, 3.5, 3.0, 5.0
   ];
-  
-  while(true){
+  List<String> produtos = [
+    'Arroz', 'Feijão', 'Carne bovina',
+    'Frango', 'Leite', 'Ovos', 'Macarrão',
+    'Farinha de trigo', 'Óleo de soja'
+  ];
+  List<String> ListadeCompras = [
+
+  ];
+
+  while(true) {
     exibirTabela();
-    double soma = 0.0;
-    for(var i = 0; i < 5; i++){
-      stdout.write('Escolha o produto ${i+1}: ');
-      String? entrada = stdin.readLineSync();
-      if(entrada != null){
-        int opcao = int.parse(entrada);
-        double num1 = precos[opcao];
-        soma += num1;
-      }
-    }
-    print('A soma dos valores é: RS ${soma.toStringAsFixed(2)}');
+    double total = soma(precos);  
+    print('A soma dos valores é: RS ${total.toStringAsFixed(2)}');
+    print('Presione Enter para continuar ou sair pra sair do programa!');
+          //entrada de dados
+          String opcao = stdin.readLineSync()!;
+            //condicional que confere se o usuario digitou 'sair'
+            if(opcao == 'sair') {
+              print('FIM DO PROGRAMA!');
+              //return pra interrope o programa
+              return;
+            } else {
+            }
   }
 }
 
-//funções
+// Funções
 void exibirTabela() {
   print('-' * 70);
   print('Tabela de preços');
@@ -35,14 +44,27 @@ void exibirTabela() {
 5. Leite - RS 4,00 por litro
 6. Ovos - RS 8,00 por dúzia
 7. Macarrão - RS 4,00 por pacote de 500g
-8. Farinha de tr- RS 3,00 por kg
+8. Farinha de trigo - RS 3,00 por kg
 9. Óleo de soja - RS 5,00 por litro
 
 Escolha 5 produtos'''
-);
+  );
 }
 
-
+double soma(List<double> precos) {
+  double total = 0.0;
+  for(var i = 0; i < 5; i++) {
+    stdout.write('Escolha o produto ${i+1}: ');
+    String? entrada = stdin.readLineSync();
+    if(entrada != null) {
+      int opcao = int.parse(entrada);
+      
+      double preco = precos[opcao - 1];
+      total += preco;
+    }
+  }
+  return total;
+}
 
 //tema
 
@@ -56,4 +78,19 @@ Escolha 5 produtos'''
 //soma dos valores
 
 
+void main() {
+  List<int> numeros = [1, 2, 3, 4, 5];
 
+  // Chama a função com parâmetro opcional 'mensagem'
+  varreduraComMensagem(numeros, mensagem: 'Os números são: ');
+}
+
+void varreduraComMensagem(List<int> lista, {String mensagem}) {
+  // Se a mensagem foi informada, imprime-a antes de varrer a lista
+  if (mensagem != null) {
+    print(mensagem);
+  }
+
+  // Define uma função anônima que imprime cada elemento da lista
+  lista.forEach((elemento) => print(elemento));
+}
