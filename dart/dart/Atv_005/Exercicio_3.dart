@@ -56,7 +56,7 @@ void exibirMenu() {
 
 
 //função que converte os centimetros pra polegadas
-void converterCmParaPolegada(List<dynamic> historico) {
+converterCmParaPolegada(List<dynamic> historico) {
   //print inline
   stdout.write('Digite o valor em centímetros: ');
   //entrada de dados com casting e nullsafety
@@ -71,11 +71,11 @@ void converterCmParaPolegada(List<dynamic> historico) {
   //Saída de dados interpolada
   print('$cm cm = ${polegada.toStringAsFixed(2)} polegadas');
   //metodo add que adiciona uma String interpolada a minha lista de resultados
-  historico.add('$cm cm = $polegada polegadas');
+  historico.add('$cm cm = ${polegada.toStringAsFixed(2)} polegadas');
 }
 
 //função que converte os milimetros pra centimetros
-void converterMilimetroParaCm(List<dynamic> historico) {
+converterMilimetroParaCm(List<dynamic> historico) {
   //print inline
   stdout.write('Digite o valor em milímetros: ');
   //entrada de dados com casting e nullsafety
@@ -94,7 +94,7 @@ void converterMilimetroParaCm(List<dynamic> historico) {
 }
 
 //função que converte os kilometros em milhas
-void converterKmParaMilha(List<dynamic> historico) {
+converterKmParaMilha(List<dynamic> historico) {
   //print inline
   stdout.write('Digite o valor em quilômetros: ');
   //entrada de dados com casting e nullsafety
@@ -113,7 +113,7 @@ void converterKmParaMilha(List<dynamic> historico) {
 }
 
 //função anonima que exibi os items da lista usando uma varredura com foreach
-void exibirHistorico(List<dynamic> historico) {
+exibirHistorico(List<dynamic> historico) {
   if (historico.isEmpty) {
     print('Histórico vazio.');
   } else {
@@ -122,7 +122,7 @@ void exibirHistorico(List<dynamic> historico) {
 }
 
 //função com parametro opcional
-void varreduraComMensagem(List<dynamic> historico, {String? mensagem}) {
+varreduraComMensagem(List<dynamic> historico, {String? mensagem}) {
   //condicional que confere se o variavel mensagem e nula
   if (mensagem != null) {
     print(mensagem);
