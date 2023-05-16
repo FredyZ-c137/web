@@ -58,7 +58,7 @@ double soma(List<double> precos) {
     String? entrada = stdin.readLineSync();
     if(entrada != null) {
       int opcao = int.parse(entrada);
-      
+
       double preco = precos[opcao - 1];
       total += preco;
     }
@@ -78,14 +78,14 @@ double soma(List<double> precos) {
 //soma dos valores
 
 
-void main() {
+void m1ain() {
   List<int> numeros = [1, 2, 3, 4, 5];
 
   // Chama a função com parâmetro opcional 'mensagem'
   varreduraComMensagem(numeros, mensagem: 'Os números são: ');
 }
 
-void varreduraComMensagem(List<int> lista, {String mensagem}) {
+void varreduraComMensagem(List<int> lista, {String ?mensagem}) {
   // Se a mensagem foi informada, imprime-a antes de varrer a lista
   if (mensagem != null) {
     print(mensagem);
