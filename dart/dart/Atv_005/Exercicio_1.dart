@@ -72,7 +72,7 @@ double soma(List<double> precos, List<String> produtos, List<String> ListaDeComp
     if(entrada != null) {
       //casting mudando a entrada de string pra int
       int opcao = int.parse(entrada);
-      //pegando o preço da lista de preços
+      
       double preco = precos[opcao - 1];
       //pegando o produto da lista de produtos
       String item = produtos[opcao -1];
@@ -85,8 +85,27 @@ double soma(List<double> precos, List<String> produtos, List<String> ListaDeComp
   //retornando a soma dos valores
   return total;
 }
-//função anonima que varre a lista de compras com um foreach e printa eles na tela
-void varreduraComMensagem(List<dynamic> ListadeCompras, {String? mensagem}) {
+
+//tema
+
+//soma os preços dos produtos do usuario
+//depois retorna o preço   
+
+//funcionalidade
+
+//print da tabela de items 
+//entrada de dados do usuario escolhendo os items desejados os adicionando os removendo
+//soma dos valores
+
+
+void main() {
+  List<int> numeros = [1, 2, 3, 4, 5];
+
+  // Chama a função com parâmetro opcional 'mensagem'
+  varreduraComMensagem(numeros, mensagem: 'Os números são: ');
+}
+
+void varreduraComMensagem(List<int> lista, {String mensagem}) {
   // Se a mensagem foi informada, imprime-a antes de varrer a lista
   if (mensagem != null) {
     print(mensagem);
