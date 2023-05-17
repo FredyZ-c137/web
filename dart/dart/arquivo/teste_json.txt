@@ -1,0 +1,2 @@
+{"nome":"yasuo","idade":20,"cidade":"yonia"}
+{"nome":"irelia","idade":19,"cidade":"yonia"}
