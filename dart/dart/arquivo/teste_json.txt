@@ -1,2 +1,3 @@
-{"nome":"yasuo","idade":20,"cidade":"yonia"}
-{"nome":"irelia","idade":19,"cidade":"yonia"}
+{"nome":"lee sin","idade":29,"cidade":"shurima"}
+{"nome":"a","idade":10,"cidade":"juiz de fora"}
+{" nome":"yone","idade":22,"cidade":"yonia"}
