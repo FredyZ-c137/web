@@ -1,26 +1,26 @@
 import 'dart:io';
 import 'dart:convert';
-
+ 
 void main() {
   final caminho = File('../arquivo/teste_json.txt');
 
   final listaMapas = lerMapasDoArquivo(caminho);
-  printMapas(listaMapas);
 
-  stdout.write('\nDigite o número do mapa que deseja excluir: ');
-  final linhaParaExcluir = int.parse(stdin.readLineSync()!);
+  stdout.write('\nDigite o número do mapa que deseja modificar: ');
+  final linhaParaAlterar = int.parse(stdin.readLineSync()!);
 
-  final listaAtualizada = excluirLinha(listaMapas, linhaParaExcluir);
+  final mapaExistente = obterMapaPorLinha(listaMapas, linhaParaAlterar);
 
-  if(listaAtualizada != null){
-    /*
-    */
-    final novoConteudo = 
-    listaAtualizada.map((mapa) => json.encode(mapa)).join('\n');
+  if (mapaExistente != null) {
+    final mapaAtualizado = obterInformacoesDoUsuario(mapaExistente);
+    listaMapas[linhaParaAlterar - 1] = mapaAtualizado;
+
+    final novoConteudo =
+        listaMapas.map((mapa) => json.encode(mapa)).join('\n');
     caminho.writeAsStringSync(novoConteudo);
-    print('Linha ${linhaParaExcluir} excluida com sucesso!'); 
+    print('Linha ${linhaParaAlterar} alterada com sucesso!');
   } else {
-    print('Falha ao excluir a linha ${linhaParaExcluir}.');
+    print('Falha ao modificar a linha ${linhaParaAlterar}.');
   }
 }
 
@@ -28,10 +28,10 @@ List<Map<String, dynamic>> lerMapasDoArquivo(File arquivo) {
   final conteudo = arquivo.readAsLinesSync();
   final listaMapas = [];
 
-  for (var i = 0; i< conteudo.length; i++) {
+  for (var i = 0; i < conteudo.length; i++) {
     final linha = conteudo[i].trim();
 
-    if(linha.isNotEmpty) {
+    if (linha.isNotEmpty) {
       try {
         final mapaDecodificado = json.decode(linha);
         listaMapas.add(mapaDecodificado);
@@ -40,32 +40,28 @@ List<Map<String, dynamic>> lerMapasDoArquivo(File arquivo) {
       }
     }
   }
-  /*
-  
-  */
+
   return listaMapas.cast<Map<String, dynamic>>();
 }
 
-List<dynamic>? excluirLinha(List<dynamic> lista, int linhaParaExcluir) {
-  if (linhaParaExcluir > 0 && linhaParaExcluir <= lista.length) {
-    lista.removeAt(linhaParaExcluir - 1);
-    return lista;
+Map<String, dynamic>? obterMapaPorLinha(
+    List<Map<String, dynamic>> listaMapas, int linha) {
+  if (linha > 0 && linha <= listaMapas.length) {
+    return listaMapas[linha - 1];
   }
   return null;
 }
 
-//Faz a montagem
-void printMapas(List<dynamic>lista) {
-  for (var i = 0; i < lista.length; i++) {
-    final mapa = lista[i];
-    print('\n=== Mapa ${i + 1} ===');
-    printMap(mapa);
-  }
-}
+Map<String, dynamic> obterInformacoesDoUsuario(Map<String, dynamic> mapaExistente) {
+  print('=== Modificando o Mapa ===');
+  stdout.write('Digite o nome: ');
+  final nome = stdin.readLineSync()!;
 
-//Faz a varredura
-void printMap(Map<String, dynamic> map) {
-  map.forEach((key, value) {
-    print('$key: $value');
-  });
+  stdout.write('Digite a idade: ');
+  final idade = int.parse(stdin.readLineSync()!);
+
+  stdout.write('Digite a cidade: ');
+  final cidade = stdin.readLineSync()!;
+
+  return {'nome': nome, 'idade': idade, 'cidade': cidade};
 }

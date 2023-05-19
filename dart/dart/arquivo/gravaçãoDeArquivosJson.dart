@@ -3,7 +3,6 @@ import 'dart:convert';
 
 void main() {
   final arquivo = File('../arquivo/teste_json.txt'); 
-  print('Ola mundo');
 
   for(var i = 1; i <= 3; i++){
     final mapa = obterInformacoesDoUsuario(i);
@@ -14,7 +13,7 @@ void main() {
 
       final mapaCodificado = json.encode(mapa);
       //FileMode.append para gravar
-      arquivo.writeAsStringSync(mapaCodificado + '\n', mode: FileMode.append);
+      arquivo.writeAsStringSync('\n' + mapaCodificado + '\n', mode: FileMode.append);
       print('Mapa $i gravado com sucesso!');
     } catch (e) {
       print('Ocorreu um erro ao gravar o mapa $i: $e');

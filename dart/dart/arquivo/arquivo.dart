@@ -66,7 +66,7 @@ List<dynamic>? excluirLinha(List<dynamic> lista, int linhaParaExcluir) {
 
 Map<String, dynamic> obterInformacoesDoUsuario(int numeroMapa) {
   print('=== Preencheado o Mapa $numeroMapa ===');
-  stdout.write('Digite o nome: ');
+  stdout.write('Digite o nome: '); 
   final nome = stdin.readLineSync()!;
 
   stdout.write('Digite a idade: ');

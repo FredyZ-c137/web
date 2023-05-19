@@ -1,3 +1,5 @@
-{"nome":"lee sin","idade":29,"cidade":"shurima"}
-{"nome":"a","idade":10,"cidade":"juiz de fora"}
-{" nome":"yone","idade":22,"cidade":"yonia"}
+{"nome":"yone","idade":23,"cidade":"shurima"}
+{"nome":"yone", "idade":23, "cidade":"shurima"}
+{"nome":"yone","idade":23,"cidade":"shurima"}
+{"nome":"yone","idade":23,"cidade":"shurima"}
+
