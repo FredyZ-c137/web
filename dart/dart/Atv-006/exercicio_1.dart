@@ -2,138 +2,67 @@ import 'dart:io';
 import 'dart:convert';
 
 void main() {
-  //declarando uma lista vazia de resultados
-  List<dynamic> resultados = [];
+  Map<String, int> listaTelefonica = {};
 
-  //Loop infinito para o usuário poder realizar várias operações
   while (true) {
-    //Exibe o menu para o usuário
-    exibirMenu();
+    print('-' * 70);
+    print('EXERCÍCIO C: WHILE, SWITCH IF');
+    print('-' * 70);
+    print('Escolha uma opção:');
+    print('1 - Inserir nome e telefone');
+    print('2 - Exibir lista nomes e telefones');
+    print('3 - Sair do programa');
 
-    //Recebe a opção escolhida pelo usuário
-    String? opcao = stdin.readLineSync();
+    int num = int.parse(stdin.readLineSync()!);
 
-    //Verifica qual operação o usuário escolheu
-    switch (opcao) {
-      case '1':
-        realizarOperacao(somar, resultados);
+    switch (num) {
+      case 1:
+        stdout.write('Digite um nome: ');
+        String nome1 = stdin.readLineSync()!;
+        stdout.write('Digite um número de telefone: ');
+        int telefone = int.parse(stdin.readLineSync()!);
+
+        if (nome1.isNotEmpty && telefone != null) {
+          listaTelefonica.putIfAbsent(nome1, () => telefone);
+        }
+        print('Pressione Enter para continuar ou digite "sair" para sair do programa!');
+        String opcao = stdin.readLineSync()!;
+        if (opcao == 'sair') {
+          print('FIM DO PROGRAMA!');
+          adicionar(listaTelefonica);
+          return;
+        }
         break;
-      case '2':
-        realizarOperacao(subtrair, resultados);
+
+      case 2:
+        listaTelefonica.forEach((key, value) {
+          print('$key: $value');
+        });
+        print('Pressione Enter para continuar ou digite "sair" para sair do programa!');
+        String opcao = stdin.readLineSync()!;
+        if (opcao == 'sair') {
+          print('FIM DO PROGRAMA!');
+          return;
+        }
         break;
-      case '3':
-        realizarOperacao(multiplicar, resultados);
-        break;
-      case '4':
-        realizarOperacao(dividir, resultados);
-        break;
-      case '5':
-        print('Fim do programa!');
-        varreduraComMensagem(resultados, mensagem: 'Historico de resultados: ');
+
+      case 3:
+        print('FIM DO PROGRAMA!');
+        adicionar(listaTelefonica);
         return;
-      default:
-        print('Opção inválida, tente novamente.');
-        break;
     }
   }
 }
 
-//Exibe o menu para o usuário
-void exibirMenu() {
-  print('Escolha uma das operações abaixo:');
-  print('1 - Somar');
-  print('2 - Subtrair');
-  print('3 - Multiplicar');
-  print('4 - Dividir');
-  print('5 - Sair');
-}
+void adicionar(Map<String, int> listaTelefonica) {
+  final arquivo = File('../arquivo/listaTelefonica_json1.txt');
 
-//Realiza a operação escolhida pelo usuário
-void realizarOperacao(Function operacao, List<dynamic> resultados) {
-  //Recebe os valores para a operação 
-  stdout.write('Digite o primeiro número: ');
-  double? valor1 = double.tryParse(stdin.readLineSync()!);
-  stdout.write('Digite o segundo número: ');
-  double? valor2 = double.tryParse(stdin.readLineSync()!);
-
-  //Verifica se os valores foram recebidos corretamente
-  if (valor1 == null || valor2 == null) {
-    print('Valores inválidos, tente novamente.');
-    return;
-  }
-
-  final arquivo = File('../arquivo/teste_json.txt'); 
-
-  lerMapasDoArquivo(arquivo);
-
-  //Realiza a operação e exibe o resultado
-  dynamic resultado = operacao(valor1, valor2);
-  resultados.add(resultado);
-  print('Resultado: $resultado');
-
-  if(resultados != null){
-
-      dynamic mapa = resultados;
-
-      final mapaCodificado = json.encode(mapa);
-      //FileMode.append para gravar
-      arquivo.writeAsStringSync('\n' + mapaCodificado + '\n', mode: FileMode.append);
-      print('Calculo gravado com sucesso!');
-    } else {
-      print('Ocorreu um erro ao gravar o resultado');
-    }
-
-}
-
-//Funções matemáticas
-double somar(double valor1, double valor2) {
-  return valor1 + valor2;
-}
-
-double subtrair(double valor1, double valor2) {
-  return valor1 - valor2;
-}
-
-double multiplicar(double valor1, double valor2) {
-  return valor1 * valor2;
-}
-
-double dividir(double valor1, double valor2) {
-  return valor1 / valor2;
-}
-
-//função anonima que varre a lista e exibi os elementos 
-void varreduraComMensagem(List<dynamic> resultados, {String? mensagem}) {
-  //condicional que confere se a variavel mensagem e nula
-  if (mensagem != null) {
-    print(mensagem);
-  }
-  //Uma função anônima que imprime cada elemento da lista
-  resultados.forEach((elemento) => print(elemento));
-}
-
-void lerMapasDoArquivo(File arquivo) {
-  final linhas = arquivo.readAsLinesSync();
-
-  for (var i = 0; i < linhas.length; i++) {
-    final mapaDecodificado = json.decode(linhas[i]);
-    print('\n=== calculo ${i + 1} ===');
-    printMap(mapaDecodificado);
+  if (listaTelefonica.isNotEmpty) {
+    dynamic mapa = listaTelefonica;
+    final mapaCodificado = json.encode(mapa);
+    arquivo.writeAsStringSync(mapaCodificado + '\n', mode: FileMode.append);
+    print('Cálculo gravado com sucesso!');
+  } else {
+    print('Ocorreu um erro ao gravar o resultado');
   }
 }
-
-void printMap(Map<String, dynamic> mapa){
-  mapa.forEach((key, value) {
-    print('$key: $value');
-  });
-}
-
-//Funcionalidade
-
-//Esse código Dart é um simples programa de calculadora que permite ao usuário 
-//realizar operações matemáticas básicas (adição, subtração, multiplicação e divisão) 
-//em um loop infinito. Ele exibe um menu de opções para o usuário escolher a operação desejada, 
-//lê os números de entrada do usuário e realiza a operação escolhida, exibindo o resultado. 
-//Ele também mantém um histórico de resultados e permite que o usuário visualize o histórico 
-//antes de encerrar o programa. As funções matemáticas são definidas separadamente como funções 
-//que recebem dois números e retornam o resultado da operação correspondente. 
