@@ -98,14 +98,14 @@ double soma(List<double> precos, List<String> produtos, List<String> ListadeComp
 //soma dos valores
 
 
-void main() {
-  List<int> numeros = [1, 2, 3, 4, 5];
+void main1() {
+  List<String> numeros = ['1', '2', '3', '4','5'];
 
   // Chama a função com parâmetro opcional 'mensagem'
   varreduraComMensagem(numeros, mensagem: 'Os números são: ');
 }
 
-void varreduraComMensagem(List<int> lista, {String mensagem}) {
+void varreduraComMensagem(List<String> ListadeCompras, {String ?mensagem}) {
   // Se a mensagem foi informada, imprime-a antes de varrer a lista
   if (mensagem != null) {
     print(mensagem);
