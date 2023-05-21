@@ -25,7 +25,7 @@ void main() {
     //Saída de dados interpolada
     print('A soma dos valores é: RS ${total.toStringAsFixed(2)}');
     //chamada da função de varredura da lista de resuldados
-    varreduraComMensagem(ListadeCompras, mensagem: 'Lista de produtos: ');
+    //varreduraComMensagem(List<String> ListadeCompras, mensagem: 'Lista de produtos: ');
     //print que exibi pro usuario a escolha de continuar rodando o programa ou de sair dele
     print('Presione Enter para continuar ou sair pra sair do programa!');
           //entrada de dados
@@ -98,20 +98,20 @@ double soma(List<double> precos, List<String> produtos, List<String> ListaDeComp
 //soma dos valores
 
 
-void main() {
+void main1() {
   List<int> numeros = [1, 2, 3, 4, 5];
 
   // Chama a função com parâmetro opcional 'mensagem'
   varreduraComMensagem(numeros, mensagem: 'Os números são: ');
 }
 
-void varreduraComMensagem(List<int> lista, {String mensagem}) {
+void varreduraComMensagem(List<int> lista, {String ?mensagem}) {
   // Se a mensagem foi informada, imprime-a antes de varrer a lista
   if (mensagem != null) {
     print(mensagem);
   }
   // Define uma função anônima que imprime cada elemento da lista
-  ListadeCompras.forEach((elemento) => print(elemento));
+  //ListadeCompras.forEach((elemento) => print(elemento));
 }
 
 //funcionalidade
