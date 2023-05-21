@@ -2,7 +2,7 @@ import 'dart:io';
 
 void main() {
   //Caminho do arquivo
-  String caminhoArquivo = 'Documentos';
+  String caminhoArquivo = '../arquivo/Documentos';
 
   //Abrir o arquivo
   File arquivo = File(caminhoArquivo);

@@ -61,7 +61,7 @@ Escolha 5 produtos'''
 }
 
 //função que soma os valores e adiciona eles em uma lista de compras
-double soma(List<double> precos, List<String> produtos, List<String> ListaDeCompras) {
+double soma(List<double> precos, List<String> produtos, List<String> ListadeCompras) {
   double total = 0.0;
   for(var i = 0; i < 5; i++) {
     //print inline
@@ -77,7 +77,7 @@ double soma(List<double> precos, List<String> produtos, List<String> ListaDeComp
       //pegando o produto da lista de produtos
       String item = produtos[opcao -1];
       //adicionando os produtos escolhidos na lista de compras
-      ListaDeCompras.add(item);
+      ListadeCompras.add(item);
       //soma dos items
       total += preco;
     }
@@ -98,14 +98,14 @@ double soma(List<double> precos, List<String> produtos, List<String> ListaDeComp
 //soma dos valores
 
 
-void main1() {
+void main() {
   List<int> numeros = [1, 2, 3, 4, 5];
 
   // Chama a função com parâmetro opcional 'mensagem'
   varreduraComMensagem(numeros, mensagem: 'Os números são: ');
 }
 
-void varreduraComMensagem(List<int> lista, {String ?mensagem}) {
+void varreduraComMensagem(List<int> lista, {String mensagem}) {
   // Se a mensagem foi informada, imprime-a antes de varrer a lista
   if (mensagem != null) {
     print(mensagem);

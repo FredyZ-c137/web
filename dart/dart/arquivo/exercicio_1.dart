@@ -27,7 +27,6 @@ void main() {
         }
         print('Pressione Enter para continuar ou digite "sair" para sair do programa!');
         String opcao = stdin.readLineSync()!;
-        adicionar(listaTelefonica);
         if (opcao == 'sair') {
           print('FIM DO PROGRAMA!');
           adicionar(listaTelefonica);
@@ -41,10 +40,8 @@ void main() {
         });
         print('Pressione Enter para continuar ou digite "sair" para sair do programa!');
         String opcao = stdin.readLineSync()!;
-        adicionar(listaTelefonica);
         if (opcao == 'sair') {
           print('FIM DO PROGRAMA!');
-          adicionar(listaTelefonica);
           return;
         }
         break;
@@ -58,7 +55,7 @@ void main() {
 }
 
 void adicionar(Map<String, int> listaTelefonica) {
-  final arquivo = File('./arquivo/teste_json.txt');
+  final arquivo = File('../arquivo/teste_json.txt');
 
   if (listaTelefonica.isNotEmpty) {
     dynamic mapa = listaTelefonica;
