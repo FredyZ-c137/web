@@ -1,3 +1,0 @@
-{"nome":"marcos","idade":19,"cidade":"gay"}
-{"nome":"fanatic","idade":12,"cidade":"pppgggg"}
-{"nome":"gustavo","idade":18,"cidade":"juiz de fora"}

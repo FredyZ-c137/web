@@ -1,2 +1,0 @@
-{"nome":"lucas","idade":19,"cidade":"gay"}
-{"nome":"fanatic","idade":12,"cidade":"pppgggg"}
