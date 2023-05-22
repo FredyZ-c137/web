@@ -9,7 +9,7 @@ void main() {
   //laço while para manter o codigo rodando
   while (true) {
     //atribuindo o conteudo do arquivo cadastro_json.txt na variavel caminho
-    final caminho = File('../arquivo/cadastro_json.txt');
+    final caminho = File('../Atv-006/cadastro_json.txt');
     //atribuindo o valor retornado pela função lerMapasDoArquivo na variavel listaMapas
     final listaMapas = lerMapasDoArquivo(caminho);
 
@@ -150,10 +150,24 @@ void alteracoes(List<Map<String, dynamic>> arquivos) {
     
     // Atualiza o nome do mapa encontrado
     arquivos[index]['nome'] = novoNome;
-    print(arquivos);
 
+    print('Digite sim para alterar mais items do usuario ou "sair" para so mudar o nome! ');
+    String? opcao = stdin.readLineSync();
+
+      if(opcao == 'sim'){
+        print('Digite a nova idade: ');
+        int novaIdade = int.parse(stdin.readLineSync()!);
+        // Atualiza a idade do mapa encontrado
+        arquivos[index]['idade'] = novaIdade;
+
+        print('Digite a nova cidade: ');
+        String? novaCidade = stdin.readLineSync();
+        // Atualiza a cidade do mapa encontrado
+        arquivos[index]['cidade'] = novaCidade;
+      }
+      
     // Grava as alterações no arquivo
-    final caminho = File('../arquivo/cadastro_json.txt');
+    final caminho = File('../Atv-006/cadastro_json.txt');
     caminho.writeAsStringSync('');
     arquivos.forEach((mapa) {
       final mapaCodificado = json.encode(mapa);

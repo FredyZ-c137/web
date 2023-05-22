@@ -36,18 +36,10 @@ void main() {
         if (nome1.isNotEmpty && telefone != null) {
           listaTelefonica.putIfAbsent(nome1, () => telefone);
         }
-        //print
-        print('Pressione Enter para continuar ou digite "sair" para sair do programa!');
-        //entrada de dados
-        String opcao = stdin.readLineSync()!;
-        //conndicional que confere se o usuario encerrou o programa
-        if (opcao == 'sair') {
-          print('FIM DO PROGRAMA!');
-          //chamada da função 'adicionar'
-          adicionar(listaTelefonica);
-          return;
-        }
-        break;
+        //chamada da função 'adicionar'
+        adicionar(listaTelefonica);       
+      break;
+        
 
       //case 2 que varre e exibi os nomes e telefones do arquivo
       case 2:
@@ -79,14 +71,14 @@ void main() {
 
 // função que adiciona os nomes e telefones no arquivo json
 void adicionar(Map<String, int> listaTelefonica) {
-  final arquivo = File('../arquivo/listaTelefonica_json1.txt');
+  final arquivo = File('../Atv-006/listaTelefonica_json1.txt');
 
   if (listaTelefonica.isNotEmpty) {
     dynamic mapa = listaTelefonica;
     final mapaCodificado = json.encode(mapa);
     arquivo.writeAsStringSync(mapaCodificado + '\n', mode: FileMode.append);
-    print('Cálculo gravado com sucesso!');
+    print('Numero gravado com sucesso!');
   } else {
-    print('Ocorreu um erro ao gravar o resultado');
+    print('Ocorreu um erro ao gravar o telefone');
   }
 }
