@@ -2,24 +2,38 @@ import 'dart:io';
 import 'dart:convert';
 
 void main() {
+  // programa principal
+
+  //=====================================================================
+
+  //laço while para manter o codigo rodando
   while (true) {
+    //atribuindo o conteudo do arquivo cadastro_json.txt na variavel caminho
     final caminho = File('../arquivo/cadastro_json.txt');
+    //atribuindo o valor retornado pela função lerMapasDoArquivo na variavel listaMapas
     final listaMapas = lerMapasDoArquivo(caminho);
 
+    //chamada da função exibirMenu
     exibirMenu();
+    //entrada de dados
     final opcao = stdin.readLineSync()!.toLowerCase();
 
     switch (opcao) {
+      //case 1 varre o arquivo e imprime os nomes dentro dele
       case '1':
         print('\nConteúdo do arquivo:');
         listaMapas.forEach((mapa) => print(json.encode(mapa)));
         break;
+      //case 2 exclui um elemento do mapa pelo seu indice  
       case '2':
+        //print
         stdout.write('\nDigite o número do mapa que deseja excluir: ');
+        //entrada de dados com casting
         final linhaParaExcluir = int.parse(stdin.readLineSync()!);
-
+        //atribuição dos valores retornados pela função excluirLinha
         final listaAtualizada = excluirLinha(listaMapas, linhaParaExcluir);
 
+        //condicional que confere se a variavel listaAtualizada esta vazia
         if (listaAtualizada != null) {
           final novoConteudo =
               listaAtualizada.map((mapa) => json.encode(mapa)).join('\n');
@@ -29,6 +43,7 @@ void main() {
           print('Falha ao excluir a linha $linhaParaExcluir.');
         }
         break;
+      //case 3 que adiciona novos conteudos do arquivo    
       case '3':
         final mapa = obterInformacoesDoUsuario(listaMapas.length + 1);
 
@@ -40,11 +55,12 @@ void main() {
           print('Ocorreu um erro ao adicionar o mapa: $e');
         }
         break;
-
+      //case 4 que altera conteudos do arquivo
       case '4':
         alteracoes(listaMapas);
         print('Novo mapa adicionado com sucesso!');
       break;  
+      //case sair que encerra o programa 
       case 'sair':
         print('Encerrando o programa...');
         return;
@@ -54,7 +70,9 @@ void main() {
     }
   }
 }
+//funções 
 
+// função que exibi o menu para o usuario
 void exibirMenu() {
   stdout.write('''
 Escolha o que deseja fazer:
@@ -68,6 +86,7 @@ Escolha o que deseja fazer:
 ''');
 }
 
+//função lerMapasDoArquivo
 List<Map<String, dynamic>> lerMapasDoArquivo(File arquivo) {
   final conteudo = arquivo.readAsLinesSync();
   final listaMapas = [];
@@ -84,10 +103,10 @@ List<Map<String, dynamic>> lerMapasDoArquivo(File arquivo) {
       }
     }
   }
-
+  //retorna um mapa dos valores do arquivo
   return listaMapas.cast<Map<String, dynamic>>();
 }
-
+//função que exclui o conteudo do arquivo pelo indice
 List<dynamic>? excluirLinha(List<dynamic> lista, int linhaParaExcluir) {
   if (linhaParaExcluir > 0 && linhaParaExcluir <= lista.length) {
     lista.removeAt(linhaParaExcluir - 1);
@@ -95,7 +114,7 @@ List<dynamic>? excluirLinha(List<dynamic> lista, int linhaParaExcluir) {
   }
   return null;
 }
-
+//função que adiciona conteudo no arquivo
 Map<String, dynamic> obterInformacoesDoUsuario(int numeroMapa) {
   print('=== Preenchendo o Mapa $numeroMapa ===');
   stdout.write('Digite o nome: ');
@@ -106,12 +125,14 @@ Map<String, dynamic> obterInformacoesDoUsuario(int numeroMapa) {
 
   stdout.write('Digite a cidade: ');
   final cidade = stdin.readLineSync()!;
-
+  //retornando os valores
   return {'nome': nome, 'idade': idade, 'cidade': cidade};
 }
-
+//função que altera os conteudos do arquivo
 void alteracoes(List<Map<String, dynamic>> arquivos) {
+  //print
   print('Digite o nome que deseja modificar: ');
+  //entrada de dados
   String? nome = stdin.readLineSync();
   
   // Procura o mapa na lista com base no nome
